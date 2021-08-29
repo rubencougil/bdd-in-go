@@ -1,0 +1,307 @@
+[
+    {
+        "uri": "features/delete-book.feature",
+        "id": "usuario-borra-un-nuevo-libro",
+        "keyword": "Feature",
+        "name": "Usuario borra un nuevo libro",
+        "description": "",
+        "line": 1,
+        "elements": [
+            {
+                "id": "usuario-borra-un-nuevo-libro;usuario-trata-de-borrar-un-libro,-pero-el-libro-no-existe.",
+                "keyword": "Scenario",
+                "name": "Usuario trata de borrar un libro, pero el libro no existe.",
+                "description": "",
+                "line": 3,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "When ",
+                        "name": "Usuario borra el libro con id \"1\"",
+                        "line": 4,
+                        "match": {
+                            "location": "main_test.go:131"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 21704
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "Se produce un error: \"el libro con id 1 no existe\"",
+                        "line": 5,
+                        "match": {
+                            "location": "main_test.go:109"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 36827
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "usuario-borra-un-nuevo-libro;usuario-borra-un-libro-que-existe.",
+                "keyword": "Scenario",
+                "name": "Usuario borra un libro que existe.",
+                "description": "",
+                "line": 7,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "name": "Usuario crea un libro con la siguiente informacion:",
+                        "line": 8,
+                        "match": {
+                            "location": "main_test.go:21"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 35577
+                        },
+                        "rows": [
+                            {
+                                "cells": [
+                                    "key",
+                                    "value"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "id",
+                                    "1"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "title",
+                                    "El Principito"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "author",
+                                    "Antoine de Saint-Exupery"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "keyword": "And ",
+                        "name": "El libro con id \"1\" y titulo \"El Principito\" ha sido creado",
+                        "line": 13,
+                        "match": {
+                            "location": "main_test.go:61"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 56050
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "Usuario borra el libro con id \"1\"",
+                        "line": 14,
+                        "match": {
+                            "location": "main_test.go:131"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 29889
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "El libro con id \"1\" y titulo \"El Principito\" ha sido borrado",
+                        "line": 15,
+                        "match": {
+                            "location": "main_test.go:151"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 45565
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "uri": "features/create-book.feature",
+        "id": "usuario-crea-un-nuevo-libro",
+        "keyword": "Feature",
+        "name": "Usuario crea un nuevo libro",
+        "description": "",
+        "line": 1,
+        "elements": [
+            {
+                "id": "usuario-crea-un-nuevo-libro;usuario-crea-un-nuevo-libro-que-ya-existe.-se-produce-un-error.",
+                "keyword": "Scenario",
+                "name": "Usuario crea un nuevo libro que ya existe. Se produce un error.",
+                "description": "",
+                "line": 3,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "name": "La libreria contiene los siguientes libros:",
+                        "line": 4,
+                        "match": {
+                            "location": "main_test.go:89"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 78749
+                        },
+                        "rows": [
+                            {
+                                "cells": [
+                                    "ID",
+                                    "Title",
+                                    "Author"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "1",
+                                    "El Principito",
+                                    "Antoine de Saint-Exupery"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "2",
+                                    "El Nombre de la Rosa",
+                                    "Umberto Eco"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "Usuario crea un libro con la siguiente informacion:",
+                        "line": 8,
+                        "match": {
+                            "location": "main_test.go:21"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 57445
+                        },
+                        "rows": [
+                            {
+                                "cells": [
+                                    "key",
+                                    "value"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "id",
+                                    "1"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "title",
+                                    "El Principito"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "author",
+                                    "Antoine de Saint-Exupery"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "Se produce un error: \"el libro con id 1 ya existe\"",
+                        "line": 13,
+                        "match": {
+                            "location": "main_test.go:109"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 102431
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "usuario-crea-un-nuevo-libro;usuario-crea-un-nuevo-libro.",
+                "keyword": "Scenario",
+                "name": "Usuario crea un nuevo libro.",
+                "description": "",
+                "line": 15,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "When ",
+                        "name": "Usuario crea un libro con la siguiente informacion:",
+                        "line": 16,
+                        "match": {
+                            "location": "main_test.go:21"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 229644
+                        },
+                        "rows": [
+                            {
+                                "cells": [
+                                    "key",
+                                    "value"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "id",
+                                    "1"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "title",
+                                    "El Principito"
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    "author",
+                                    "Antoine de Saint-Exupery"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "El libro con id \"1\" y titulo \"El Principito\" ha sido creado",
+                        "line": 21,
+                        "match": {
+                            "location": "main_test.go:61"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 83361
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "name": "No se ha producido ningun error",
+                        "line": 22,
+                        "match": {
+                            "location": "main_test.go:120"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 174104
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
